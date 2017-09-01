@@ -94,7 +94,7 @@ env:
         # - TT_BUILD=r64z
 
     global:
-        - secure: 
+        - secure: cc0rXvtZbBOTIoLZ8y3yb0OL/QX6TEuihW0Sodu7G3KySs83EgwYtPnqy4ELoTxhoCFISiAYv2eSu5Hqet0KwlZriwywtM6Dqmo2GqepQGCKSpMKYb4DE956PC13ccK2SDfAGMJN6sun70jK+TWXpy5GGjhHtRZcSnKB/VvoM98/5A4aqdeXFXPt+i10mXqt/IuPjYkwE5dfRUYa3b3ypSskGA2jmf2623IvwKxIjd7T9hrYvpqXwKYyedCrWo+ytyswxPG75WDUxPDlceEKH8v/tIjJv+jdtzaILUt4SPEOSDC3XagIVQnC/EoOKwu4EmhDbfWkEbzF/pRMyO2sMmvsjxLupCbryMV8ug5A/i5N6YVHQ8aXvEa9sm57RTwh3s9S3gavSdidIYuaTefEhqx+Jrw8VQsVMWImWxq/RpbIWeCfA0Ff/DYo6f6gnFEX/f8wtYn8DrOiM1RKqXJrQCyZ4A40tEr1GdX2R9cz2eC0ub0ZVA6yNdaxF/4dkfvkhAjYbuCTnqtmft9GYDL9KYW+fGlKCdyOl9eN+V9DWqc60nSjx0GuLVBZ82pcnWYi6YcC4N70imwcHisMcyDlCqY3Mmh3gJy/cw4QmD4Ix8L1lYiZ43dV/ECVfCjZBIe5vdhMa29nvjc1IBtT5xnSDPGgQJUdjIJY3Ejd2FtTHfc=
         
 # Building the standard samples
 script:
