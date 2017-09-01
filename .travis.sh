@@ -32,7 +32,7 @@ sudo pip install requests -U
 git clone -b q3 https://github.com/oglops/tomato.git
 git clone -b v140 https://github.com/oglops/tomato-gui.git
 
-sudo ln -s ~/advancedtomato/tools/brcm /opt/brcm
+sudo ln -s ~/tomato/tools/brcm /opt/brcm
 
 rsync -rpv --ignore-times  ./tomato-gui/*  ./tomato/release/src-rt/router/www/  --exclude .git
 
