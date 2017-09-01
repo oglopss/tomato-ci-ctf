@@ -72,26 +72,31 @@ env:
     # - CT_SAMPLE=mipsel-unknown-linux-gnu
     matrix:
         # - export PATH=$HOME/x-tools/mipsel-unknown-linux-uclibc/bin:$PATH
-        # - TT_BUILD=r2z
-        # - TT_BUILD=r2e
-        # - TT_BUILD=r2c
-        # - TT_BUILD=r2d
-        # - TT_BUILD=r2g
-        # - TT_BUILD=r2t
-        # - TT_BUILD=r2b
-        # - TT_BUILD=r2o
-        # - TT_BUILD=r2z
-        # - TT_BUILD=r2v
-        # - TT_BUILD=r2m
-        # - TT_BUILD=r2i
+        - TT_BUILD=r2z
+        - TT_BUILD=r2e
+        - TT_BUILD=r2c
+        - TT_BUILD=r2d
+        - TT_BUILD=r2g
+        - TT_BUILD=r2t
+        - TT_BUILD=r2b
+        - TT_BUILD=r2o
+        - TT_BUILD=r2z
+        - TT_BUILD=r2v
+        - TT_BUILD=r2m
+        - TT_BUILD=r2i
         - TT_BUILD=r2j
-        # - TT_BUILD=r2f
-        # - TT_BUILD=r2t
-        # - TT_BUILD=n60z
-        # - TT_BUILD=n64m
-        # - TT_BUILD=n60
-        # - TT_BUILD=r64e
-        # - TT_BUILD=r64z
+        - TT_BUILD=r2f
+        - TT_BUILD=r2t
+        - TT_BUILD=n60z
+        - TT_BUILD=n64m
+        - TT_BUILD=n60
+        - TT_BUILD=v2e
+        - TT_BUILD=v2z
+        - TT_BUILD=r64e
+        - TT_BUILD=r64z
+        - TT_BUILD=r2q3m
+        - TT_BUILD=r2q3v
+        - TT_BUILD=hg32064k
 
     global:
         - secure: cc0rXvtZbBOTIoLZ8y3yb0OL/QX6TEuihW0Sodu7G3KySs83EgwYtPnqy4ELoTxhoCFISiAYv2eSu5Hqet0KwlZriwywtM6Dqmo2GqepQGCKSpMKYb4DE956PC13ccK2SDfAGMJN6sun70jK+TWXpy5GGjhHtRZcSnKB/VvoM98/5A4aqdeXFXPt+i10mXqt/IuPjYkwE5dfRUYa3b3ypSskGA2jmf2623IvwKxIjd7T9hrYvpqXwKYyedCrWo+ytyswxPG75WDUxPDlceEKH8v/tIjJv+jdtzaILUt4SPEOSDC3XagIVQnC/EoOKwu4EmhDbfWkEbzF/pRMyO2sMmvsjxLupCbryMV8ug5A/i5N6YVHQ8aXvEa9sm57RTwh3s9S3gavSdidIYuaTefEhqx+Jrw8VQsVMWImWxq/RpbIWeCfA0Ff/DYo6f6gnFEX/f8wtYn8DrOiM1RKqXJrQCyZ4A40tEr1GdX2R9cz2eC0ub0ZVA6yNdaxF/4dkfvkhAjYbuCTnqtmft9GYDL9KYW+fGlKCdyOl9eN+V9DWqc60nSjx0GuLVBZ82pcnWYi6YcC4N70imwcHisMcyDlCqY3Mmh3gJy/cw4QmD4Ix8L1lYiZ43dV/ECVfCjZBIe5vdhMa29nvjc1IBtT5xnSDPGgQJUdjIJY3Ejd2FtTHfc=
@@ -110,4 +115,4 @@ after_failure:
     - tail -n 1000 ~/tomato.txt
     
     
-# after_success: . $TRAVIS_BUILD_DIR/update-gh-pages.sh
+after_success: . $TRAVIS_BUILD_DIR/update-gh-pages.sh
