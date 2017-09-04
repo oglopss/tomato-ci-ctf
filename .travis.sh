@@ -236,9 +236,9 @@ build_tomato()
     if [ "$TT_BUILD" == "r2q3m" ] || [ "$TT_BUILD" == "r2q3v" ] ; then
         make V1=RT-N5x-CN- V2=-140-q3  $TT_BUILD &
     elif [ "$TT_BUILD" == "hg32064k" ]; then
-        make V1=RT-N5x-CN- V2=-140-hg320  $TT_BUILD 
+        make V1=RT-N5x-CN- V2=-140-hg320  $TT_BUILD &
     else
-        make V1=RT-N5x-CN- V2=-140$TT_BUILD 
+        make V1=RT-N5x-CN- V2=-140 $TT_BUILD &
 
     fi
 
