@@ -4,7 +4,7 @@
   echo -e "Starting to update gh-pages\n"
 
   echo ======== show ~/tomato/release/src-rt/image =======
-  ls -l ~/tomato/release/src-rt/image --block-size=K
+  ls -lt ~/tomato/release/src-rt/image --block-size=K
 
   #copy data we're interested in to other place
   # mkdir -p $HOME/coverage
@@ -78,7 +78,7 @@ push_changes()
   cd $HOME/gh-pages-$TT_BUILD
   mkdir -p download && cd download
 
-  trx=($(ls -1 ~/tomato/release/src-rt/image/tomato*.trx))
+  trx=($(ls -1 -t ~/tomato/release/src-rt/image/tomato*.trx))
   trx=${trx[0]}
 
   cp -Rf $trx .
