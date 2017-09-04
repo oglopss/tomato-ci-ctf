@@ -150,10 +150,22 @@ make
 sudo  make install
 
 
+# ncurse 6
+cd ~
+wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
+tar xvf ncurses-6.0.tar.gz
+cd ncurses-6.0
+sh configure --prefix=/usr
+make
+sudo  make install
 # try same version in local travis
 
 echo =========== autotools versions ===========
 dpkg -l | grep "autogen\|autoconf\|automake\|libtool"
+
+
+echo =========== ncurses versions ===========
+dpkg -l | grep curse
 
 # official image verions
 # =========== autotools versions ===========
