@@ -153,15 +153,16 @@ sudo  make install
 
 # ncurse 6
 
+# dirty hack to disable ncursesw
 sudo rm -rf /usr/include/ncursesw
 
-cd ~
-wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
-tar xvf ncurses-6.0.tar.gz
-cd ncurses-6.0
-./configure --prefix=/usr --enable-widec --enable-pc-files
-make
-sudo  make install
+# cd ~
+# wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
+# tar xvf ncurses-6.0.tar.gz
+# cd ncurses-6.0
+# ./configure --prefix=/usr --enable-widec --enable-pc-files
+# make
+# sudo  make install
 
 # try same version in local travis
 
