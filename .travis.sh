@@ -247,13 +247,22 @@ build_tomato()
     # automake
     # ./autogen.sh 
 
-    cd ~/tomato/release/src-rt
+    
 
 #     make distclean ; rm ~/advancedTomato.txt;  time make V1=RT-N5x-CN- V2=-140 r2z  2>&1 | tee ~/advancedTomato.txt
 #     make distclean
 #     rm ~/advancedTomato.txt;  
 
     # time make V1=RT-N5x-CN- V2=-140 r2z  > ~/advancedTomato.txt
+
+    # apply patch in https://github.com/tomatofirmware/tomato/commit/ce39fb4b4a348773355fc2779505db4c5b28d750
+    if [ "$TT_BUILD" == "rtn53" ] || [ "$TT_BUILD" == "n60" ] || [ "$TT_BUILD" == "n6" ]; then
+        cd ~/tomato/release/src-rt/linux
+        patch -R -p4 < fix4usbap.patch
+    fi
+   
+   
+    cd ~/tomato/release/src-rt
 
     # make V1=RT-N5x-CN- V2=-140 r2z &
     if [ "$TT_BUILD" == "r2q3m" ] || [ "$TT_BUILD" == "r2q3v" ] ; then
@@ -262,9 +271,8 @@ build_tomato()
         make V1=RT-N5x-CN- V2=-140-hg320  $TT_BUILD &
     else
         make V1=RT-N5x-CN- V2=-140 $TT_BUILD &
-
     fi
-
+    
     local build_pid=$!
 
     # Start a runner task to print a "still running" line every 5 minutes
