@@ -155,7 +155,7 @@ cd ~
 wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
 tar xvf ncurses-6.0.tar.gz
 cd ncurses-6.0
-sh configure --prefix=/usr
+sh configure --prefix=/usr --enable-widec
 make
 sudo  make install
 # try same version in local travis
