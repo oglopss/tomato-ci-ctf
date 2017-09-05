@@ -149,6 +149,7 @@ sh configure --prefix=/usr
 make
 sudo  make install
 
+sudo apt-get purge libncurses5 libncurses5-dev libncursesw5 libncursesw5-dev
 
 # ncurse 6
 cd ~
