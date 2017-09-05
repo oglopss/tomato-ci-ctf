@@ -152,14 +152,14 @@ sudo  make install
 sudo apt-get purge libncurses5 libncurses5-dev libncursesw5 libncursesw5-dev
 
 # ncurse 6
-# cd ~
-# wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
-# tar xvf ncurses-6.0.tar.gz
-# cd ncurses-6.0
-# ./configure --prefix=/usr --enable-widec --enable-pc-files
-# make
-# sudo  make install
-# try same version in local travis
+cd ~
+wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
+tar xvf ncurses-6.0.tar.gz
+cd ncurses-6.0
+./configure --prefix=/ --enable-widec --enable-pc-files
+make
+sudo  make install
+try same version in local travis
 
 echo =========== autotools versions ===========
 dpkg -l | grep "autogen\|autoconf\|automake\|libtool"
@@ -168,9 +168,9 @@ dpkg -l | grep "autogen\|autoconf\|automake\|libtool"
 echo =========== ncursesw versions ===========
 dpkg -l | grep curse
 # ls -l /usr/include
-# head -200 /usr/include/ncursesw/curses.h
-# echo =========== ncurses versions ===========
-# head -200 /usr/include/ncurses.h
+head -200 /usr/include/ncursesw/curses.h
+echo =========== ncurses versions ===========
+head -200 /usr/include/ncurses.h
 
 
 # official image verions
