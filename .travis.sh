@@ -167,7 +167,7 @@ dpkg -l | grep "autogen\|autoconf\|automake\|libtool"
 
 echo =========== ncursesw versions ===========
 dpkg -l | grep curse
-ls -lt /usr/include
+ls -lt /usr/include/ncur*
 head -200 /usr/include/ncursesw/curses.h
 echo =========== ncurses versions ===========
 head -200 /usr/include/ncurses.h
