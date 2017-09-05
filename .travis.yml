@@ -34,8 +34,8 @@ addons:
             - bison
             - flex
             - gperf
-            # - libncurses5
-            # - libncurses5-dev
+            - libncurses5
+            - libncurses5-dev
             - texinfo
             - help2man
             - asciidoc
