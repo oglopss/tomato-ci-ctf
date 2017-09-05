@@ -152,13 +152,13 @@ sudo  make install
 sudo apt-get purge libncurses5 libncurses5-dev libncursesw5 libncursesw5-dev
 
 # ncurse 6
-cd ~
-wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
-tar xvf ncurses-6.0.tar.gz
-cd ncurses-6.0
-./configure --prefix=/usr --enable-widec --enable-pc-files
-make
-sudo  make install
+# cd ~
+# wget https://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz
+# tar xvf ncurses-6.0.tar.gz
+# cd ncurses-6.0
+# ./configure --prefix=/usr --enable-widec --enable-pc-files
+# make
+# sudo  make install
 # try same version in local travis
 
 echo =========== autotools versions ===========
