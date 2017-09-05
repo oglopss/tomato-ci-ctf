@@ -164,9 +164,12 @@ echo =========== autotools versions ===========
 dpkg -l | grep "autogen\|autoconf\|automake\|libtool"
 
 
-echo =========== ncurses versions ===========
+echo =========== ncursesw versions ===========
 dpkg -l | grep curse
 head -200 /usr/include/ncursesw/curses.h
+echo =========== ncurses versions ===========
+head -200 /usr/include/ncurses.h
+
 
 # official image verions
 # =========== autotools versions ===========
