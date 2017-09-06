@@ -90,18 +90,21 @@ push_changes()
     else
       # echo crap
       tar czvf $TT_BUILD.tar.gz
+      fw=$TT_BUILD.tar.gz
     fi
   elif [ "${#chk[@]}" -ge 1 ]; then
     if [ "${#chk[@]}" -eq 1 ]; then
       fw=${chk[0]}
     else
       tar czvf $TT_BUILD.tar.gz
+      fw=$TT_BUILD.tar.gz
     fi
   elif [ "${#trx[@]}" -ge 1 ]; then
     if [ "${#trx[@]}" -eq 1 ]; then
       fw=${trx[0]}
     else
       tar czvf $TT_BUILD.tar.gz
+      fw=$TT_BUILD.tar.gz
     fi
   fi
 
