@@ -79,10 +79,35 @@ push_changes()
   mkdir -p download && cd download
 
   image=~/tomato/release/src-rt/image
-  trx=($(ls -1rt $image/tomato*.chk $image/tomato*.bin $image/tomato*.trx))
-  trx=${trx[0]}
+  bin=($(ls -1t $image/tomato*.bin))
+  chk=($(ls -1t $image/tomato*.chk))
+  trx=($(ls -1t $image/tomato*.trx))
 
-  cp -Rf $trx .
+
+  if [ "${#bin[@]}" -ge 1 ]; then
+    if [ "${#bin[@]}" -eq 1 ]; then
+      fw=${bin[0]}
+    else
+      # echo crap
+      tar czvf $TT_BUILD.tar.gz
+    fi
+  elif [ "${#chk[@]}" -ge 1 ]; then
+    if [ "${#chk[@]}" -eq 1 ]; then
+      fw=${chk[0]}
+    else
+      tar czvf $TT_BUILD.tar.gz
+    fi
+  elif [ "${#trx[@]}" -ge 1 ]; then
+    if [ "${#trx[@]}" -eq 1 ]; then
+      fw=${trx[0]}
+    else
+      tar czvf $TT_BUILD.tar.gz
+    fi
+  fi
+
+  # trx=${trx[0]}
+
+  cp -Rf $fw .
 
   #add, commit and push files
   git add -f .
@@ -99,12 +124,12 @@ if grep -qe "build: $TRAVIS_BUILD_NUMBER$" ss.yml
 then
     # code if found
     # update files
-    if grep -qe "  - $trx$" ss.yml
+    if grep -qe "  - $fw$" ss.yml
     then
         echo files already inside skip
     else
         cat >> ss.yml <<EOL
-  - $TT_BUILD $(basename "$trx")
+  - $TT_BUILD $(basename "$fw")
 EOL
     fi
   # update datetime
@@ -118,7 +143,7 @@ else
     cat > ss.yml <<EOL
 build: $TRAVIS_BUILD_NUMBER
 files:
-  - $TT_BUILD $(basename "$trx")
+  - $TT_BUILD $(basename "$fw")
 EOL
 
 fi
