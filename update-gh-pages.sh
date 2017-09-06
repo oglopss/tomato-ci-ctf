@@ -79,7 +79,7 @@ push_changes()
   mkdir -p download && cd download
 
   image=~/tomato/release/src-rt/image
-  trx=($(ls -1t $image/tomato*.chk $image/tomato*.bin $image/tomato*.trx))
+  trx=($(ls -1rt $image/tomato*.chk $image/tomato*.bin $image/tomato*.trx))
   trx=${trx[0]}
 
   cp -Rf $trx .
