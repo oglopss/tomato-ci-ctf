@@ -127,12 +127,12 @@ if grep -qe "build: $TRAVIS_BUILD_NUMBER$" ss.yml
 then
     # code if found
     # update files
-    if grep -qe "  - $fw$" ss.yml
+    if grep -qe "  - $TT_BUILD $TRAVIS_JOB_NUMBER $fw$" ss.yml
     then
         echo files already inside skip
     else
         cat >> ss.yml <<EOL
-  - $TT_BUILD $(basename "$fw")
+  - $TT_BUILD $TRAVIS_JOB_NUMBER $(basename "$fw")
 EOL
     fi
   # update datetime
@@ -146,7 +146,7 @@ else
     cat > ss.yml <<EOL
 build: $TRAVIS_BUILD_NUMBER
 files:
-  - $TT_BUILD $(basename "$fw")
+  - $TT_BUILD $TRAVIS_JOB_NUMBER $(basename "$fw")
 EOL
 
 fi
