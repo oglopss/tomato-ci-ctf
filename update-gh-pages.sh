@@ -122,14 +122,21 @@ push_changes()
 # rm -f ss.yml
 # fi
 
+echo TRAVIS_JOB_NUMBER $TRAVIS_JOB_NUMBER
+
 JOBNUM=echo $TRAVIS_JOB_NUMBER | cut -d'.' -f 2
+
+echo JOBNUM $JOBNUM
+
 JOBNUM=$(printf %04d $JOBNUM)
+
+echo padded JOBNUM $JOBNUM
 
 if grep -qe "build: $TRAVIS_BUILD_NUMBER$" ss.yml
 then
     # code if found
     # update files
-    if grep -qe "  - $TT_BUILD $TRAVIS_JOB_NUMBER $fw$" ss.yml
+    if grep -qe "  - $JOBNUM $TT_BUILD $fw$" ss.yml
     then
         echo files already inside skip
     else
