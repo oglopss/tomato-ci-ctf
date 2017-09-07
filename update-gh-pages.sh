@@ -122,6 +122,8 @@ push_changes()
 # rm -f ss.yml
 # fi
 
+echo fw $fw
+
 echo TRAVIS_JOB_NUMBER $TRAVIS_JOB_NUMBER
 
 JOBNUM=$(echo $TRAVIS_JOB_NUMBER | cut -d'.' -f 2)
