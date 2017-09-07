@@ -123,6 +123,7 @@ push_changes()
 # fi
 
 JOBNUM=echo $TRAVIS_JOB_NUMBER | cut -d'.' -f 2
+JOBNUM=$(printf %04d $JOBNUM)
 
 if grep -qe "build: $TRAVIS_BUILD_NUMBER$" ss.yml
 then
@@ -133,7 +134,7 @@ then
         echo files already inside skip
     else
         cat >> ss.yml <<EOL
-  - $TT_BUILD $JOBNUM $(basename "$fw")
+  - $JOBNUM $TT_BUILD $(basename "$fw")
 EOL
     fi
   # update datetime
@@ -147,7 +148,7 @@ else
     cat > ss.yml <<EOL
 build: $TRAVIS_BUILD_NUMBER
 files:
-  - $TT_BUILD $JOBNUM $(basename "$fw")
+  - $JOBNUM $TT_BUILD $(basename "$fw")
 EOL
 
 fi
