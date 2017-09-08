@@ -138,6 +138,7 @@ env:
 
         - TT_BUILD=r2q3m
         - TT_BUILD=r2q3v
+        - TT_BUILD=hg320        
         - TT_BUILD=hg32064k
 
     global:
