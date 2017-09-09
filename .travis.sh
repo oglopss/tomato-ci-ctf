@@ -29,8 +29,8 @@ sudo pip install pyOpenSSL ndg-httpsclient pyasn1 -U
 sudo pip install  urllib3 -U
 sudo pip install requests -U
 
-git clone -b travis https://github.com/oglops/tomato.git
-git clone -b v140 https://github.com/oglops/tomato-gui.git
+git clone --depth 1 -b travis https://github.com/oglops/tomato.git
+git clone --depth 1 -b v140 https://github.com/oglops/tomato-gui.git
 
 sudo ln -s ~/tomato/tools/brcm /opt/brcm
 
@@ -267,7 +267,7 @@ build_tomato()
     # make V1=RT-N5x-CN- V2=-140 r2z &
     if [ "$TT_BUILD" == "r2q3m" ] || [ "$TT_BUILD" == "r2q3v" ] ; then
         make V1=RT-N5x-CN- V2=-140-q3  $TT_BUILD > /dev/null &
-    elif [ "$TT_BUILD" == "hg32064k" ]; then
+    elif [ "$TT_BUILD" == "hg32064k" ] || [ "$TT_BUILD" == "hg320" ]; then
         make V1=RT-N5x-CN- V2=-140-hg320  $TT_BUILD > /dev/null &
     else
         make V1=RT-N5x-CN- V2=-140 $TT_BUILD > /dev/null  &
