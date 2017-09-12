@@ -89,12 +89,13 @@ push_changes()
   echo =========== image dir ===============
   ls -lt $image/*
 
-
+  build_token=$TT_BUILD
+  
   if [ "$BROADCOM_SDK" == "src-rt-6.x" ]; then
-    TT_BUILD="$TT_BUILD-BCMWL6"
+    build_token="$TT_BUILD-BCMWL6"
   fi
 
-  fw=tomato-$TT_BUILD.tar.gz
+  fw=tomato-$build_token.tar.gz
 
   if [ "${#bin[@]}" -ge 1 ]; then
     if [ "${#bin[@]}" -eq 1 ]; then
