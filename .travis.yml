@@ -79,8 +79,9 @@ install:
 # by the continuous integration system
 env:
     global:
-        - BROADCOM_SDK=src-rt
-        - BROADCOM_SDK=src-rt-6.x
+        BROADCOM_SDK:
+            - src-rt
+            - src-rt-6.x
     matrix:
         # - export PATH=$HOME/x-tools/mipsel-unknown-linux-uclibc/bin:$PATH
 
