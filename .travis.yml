@@ -80,6 +80,7 @@ install:
 env:
     global:
         - BROADCOM_SDK=src-rt
+        - BROADCOM_SDK=src-rt-6.x
     matrix:
         # - export PATH=$HOME/x-tools/mipsel-unknown-linux-uclibc/bin:$PATH
 
@@ -97,9 +98,9 @@ env:
         # - TT_BUILD=r2z
         # - TT_BUILD=r2v
         # - TT_BUILD=r2m
-        - TT_BUILD=r2i BROADCOM_SDK=src-rt
-        - TT_BUILD=r2j BROADCOM_SDK=src-rt
-        - TT_BUILD=r2f BROADCOM_SDK=src-rt
+        - TT_BUILD=r2i
+        - TT_BUILD=r2j
+        - TT_BUILD=r2f
 
         # - TT_BUILD=e1000v2f
         # - TT_BUILD=e1000v2i
@@ -148,10 +149,10 @@ env:
         # - TT_BUILD=hg32064k
         # include:
         #     - BROADCOM_SDK=6
-        - TT_BUILD=ac66e BROADCOM_SDK=src-rt-6.x
-        - TT_BUILD=ac66z BROADCOM_SDK=src-rt-6.x
-        - TT_BUILD=w1800re BROADCOM_SDK=src-rt-6.x
-        - TT_BUILD=w1800rz BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=ac66e
+        - TT_BUILD=ac66z
+        - TT_BUILD=w1800re
+        - TT_BUILD=w1800rz
         
 
     global:
