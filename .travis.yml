@@ -147,8 +147,8 @@ env:
         # - TT_BUILD=hg32064k
         # include:
         #     - BROADCOM_SDK=6
-        # - TT_BUILD=ac66e BROADCOM_SDK=src-rt-6.x
-        # - TT_BUILD=ac66z BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=ac66e BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=ac66z BROADCOM_SDK=src-rt-6.x
         - TT_BUILD=w1800re BROADCOM_SDK=src-rt-6.x
         - TT_BUILD=w1800rz BROADCOM_SDK=src-rt-6.x
         
