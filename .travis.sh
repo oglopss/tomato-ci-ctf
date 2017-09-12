@@ -221,19 +221,21 @@ ls /usr/share/aclocal
 
 build_tomato()
 {
-    echo ======================================
-    which cp
+    echo ================= BROADCOM_SDK =====================
+    echo $BROADCOM_SDK
+    # which cp
 
-    cd ~/tomato/release/src-rt
 
-    echo ======before=========
-    pwd
-    ls -l router/mysql
+    # cd ~/tomato/release/src-rt
 
-    cp -f router/mysql/configure.mipsel router/mysql/configure 
+    # echo ======before=========
+    # pwd
+    # ls -l router/mysql
 
-    echo ======after=========
-    ls -l router/mysql
+    # cp -f router/mysql/configure.mipsel router/mysql/configure 
+
+    # echo ======after=========
+    # ls -l router/mysql
 
 
 
@@ -261,8 +263,7 @@ build_tomato()
         patch -R -p4 < fix4usbap.patch
     fi
    
-   
-    cd ~/tomato/release/src-rt
+    cd ~/tomato/release/$BROADCOM_SDK
 
     # make V1=RT-N5x-CN- V2=-140 r2z &
     if [ "$TT_BUILD" == "r2q3m" ] || [ "$TT_BUILD" == "r2q3v" ] ; then
@@ -294,11 +295,11 @@ build_tomato()
     kill $runner_pid
     wait $runner_pid 2>/dev/null
 
-   echo ====== result =========
-   ls -l ~/tomato/release/image
-   ls -l ~/tomato/release/src-rt
-   ls -l ~/tomato/release/src-rt/image
+    echo ====== result =========
+   # ls -l ~/tomato/release/image
+   # ls -l ~/tomato/release/src-rt
    
+    ls -l ~/tomato/release/$BROADCOM_SDK/image
 
     # Return the result
     # return $result

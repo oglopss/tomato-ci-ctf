@@ -3,8 +3,8 @@
 # if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   echo -e "Starting to update gh-pages\n"
 
-  echo ======== show ~/tomato/release/src-rt/image =======
-  ls -lt ~/tomato/release/src-rt/image --block-size=K
+  echo ======== show ~/tomato/release/$BROADCOM_SDK/image =======
+  ls -lt ~/tomato/release/$BROADCOM_SDK/image --block-size=K
 
   #copy data we're interested in to other place
   # mkdir -p $HOME/coverage
@@ -79,7 +79,7 @@ push_changes()
   mkdir -p download && cd download
 
   # -t makes sure you get the last modified trx, some builds have more than one trx files
-  image=~/tomato/release/src-rt/image
+  image=~/tomato/release/$BROADCOM_SDK/image
   cd $image
 
   bin=($(ls -1t tomato*.bin))

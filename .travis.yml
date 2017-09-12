@@ -79,7 +79,7 @@ install:
 # by the continuous integration system
 env:
     global:
-        - BROADCOM_SDK=5
+        - BROADCOM_SDK=src-rt
     matrix:
         # - export PATH=$HOME/x-tools/mipsel-unknown-linux-uclibc/bin:$PATH
 
@@ -148,10 +148,10 @@ env:
         # - TT_BUILD=hg32064k
         # include:
         #     - BROADCOM_SDK=6
-        - TT_BUILD=ac66e BROADCOM_SDK=6
-        - TT_BUILD=ac66z BROADCOM_SDK=6
-        - TT_BUILD=w1800re BROADCOM_SDK=6
-        - TT_BUILD=w1800rz BROADCOM_SDK=6
+        - TT_BUILD=ac66e BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=ac66z BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=w1800re BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=w1800rz BROADCOM_SDK=src-rt-6.x
         
 
     global:
