@@ -83,8 +83,8 @@ env:
         # - export PATH=$HOME/x-tools/mipsel-unknown-linux-uclibc/bin:$PATH
 
 
-        BROADCOM_SDK:
-            - 5
+        - BROADCOM_SDK=5
+        - BROADCOM_SDK=6
 
         # - TT_BUILD=r2e
         # - TT_BUILD=r2c
@@ -96,10 +96,9 @@ env:
         # - TT_BUILD=r2z
         # - TT_BUILD=r2v
         # - TT_BUILD=r2m
-        TT_BUILD:
-            - r2i
-            - r2j
-            - r2f
+        - TT_BUILD=r2i
+        - TT_BUILD=r2j
+        - TT_BUILD=r2f
 
         # - TT_BUILD=e1000v2f
         # - TT_BUILD=e1000v2i
@@ -146,15 +145,13 @@ env:
         # - TT_BUILD=r2q3v
         # - TT_BUILD=hg320        
         # - TT_BUILD=hg32064k
-        include:
-            BROADCOM_SDK:
-                - 6
-            TT_BUILD:
-                - ac66e
-                - ac66z
-                - w1800re
-                - w1800rz
-                
+        # include:
+        #     - BROADCOM_SDK=6
+        #     - TT_BUILD=ac66e
+        #     - TT_BUILD=ac66z
+        #     - TT_BUILD=w1800re
+        #     - TT_BUILD=w1800rz
+            
 
     global:
         - secure: cc0rXvtZbBOTIoLZ8y3yb0OL/QX6TEuihW0Sodu7G3KySs83EgwYtPnqy4ELoTxhoCFISiAYv2eSu5Hqet0KwlZriwywtM6Dqmo2GqepQGCKSpMKYb4DE956PC13ccK2SDfAGMJN6sun70jK+TWXpy5GGjhHtRZcSnKB/VvoM98/5A4aqdeXFXPt+i10mXqt/IuPjYkwE5dfRUYa3b3ypSskGA2jmf2623IvwKxIjd7T9hrYvpqXwKYyedCrWo+ytyswxPG75WDUxPDlceEKH8v/tIjJv+jdtzaILUt4SPEOSDC3XagIVQnC/EoOKwu4EmhDbfWkEbzF/pRMyO2sMmvsjxLupCbryMV8ug5A/i5N6YVHQ8aXvEa9sm57RTwh3s9S3gavSdidIYuaTefEhqx+Jrw8VQsVMWImWxq/RpbIWeCfA0Ff/DYo6f6gnFEX/f8wtYn8DrOiM1RKqXJrQCyZ4A40tEr1GdX2R9cz2eC0ub0ZVA6yNdaxF/4dkfvkhAjYbuCTnqtmft9GYDL9KYW+fGlKCdyOl9eN+V9DWqc60nSjx0GuLVBZ82pcnWYi6YcC4N70imwcHisMcyDlCqY3Mmh3gJy/cw4QmD4Ix8L1lYiZ43dV/ECVfCjZBIe5vdhMa29nvjc1IBtT5xnSDPGgQJUdjIJY3Ejd2FtTHfc=
