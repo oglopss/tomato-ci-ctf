@@ -97,9 +97,9 @@ env:
         # - TT_BUILD=r2z
         # - TT_BUILD=r2v
         # - TT_BUILD=r2m
-        - TT_BUILD=r2i
-        - TT_BUILD=r2j
-        - TT_BUILD=r2f
+        - TT_BUILD=r2i BROADCOM_SDK=src-rt
+        - TT_BUILD=r2j BROADCOM_SDK=src-rt
+        - TT_BUILD=r2f BROADCOM_SDK=src-rt
 
         # - TT_BUILD=e1000v2f
         # - TT_BUILD=e1000v2i
