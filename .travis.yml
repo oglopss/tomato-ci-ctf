@@ -109,8 +109,8 @@ env:
         # - TT_BUILD=n60b BROADCOM_SDK=src-rt
         # - TT_BUILD=n60o BROADCOM_SDK=src-rt
         # - TT_BUILD=n60z BROADCOM_SDK=src-rt
-        # - TT_BUILD=n60i BROADCOM_SDK=src-rt
-        # - TT_BUILD=n60j BROADCOM_SDK=src-rt
+        - TT_BUILD=n60i BROADCOM_SDK=src-rt
+        - TT_BUILD=n60j BROADCOM_SDK=src-rt
         # - TT_BUILD=n60v BROADCOM_SDK=src-rt
         # - TT_BUILD=n60m BROADCOM_SDK=src-rt
 
