@@ -260,7 +260,7 @@ build_tomato()
     # time make V1=RT-N5x-CN- V2=-140 r2z  > ~/advancedTomato.txt
 
     # apply patch in https://github.com/tomatofirmware/tomato/commit/ce39fb4b4a348773355fc2779505db4c5b28d750
-    if [ "$TT_BUILD" == "rtn53" ] || [ "$TT_BUILD" == "n60" ] || [ "$TT_BUILD" == "n6" ] || [ "$TT_BUILD" == "e2500" ] || [ "$TT_BUILD" == "e3200" ]; then
+    if [ "$TT_BUILD" == "rtn53" ] || [ "$TT_BUILD" == "n60" ] || [ "$TT_BUILD" == "n6" ] || [ "$TT_BUILD" == "e2500" ] || [ "$TT_BUILD" == "e3200" ] || [ "$TT_BUILD" == "wndr64" ]; then
         cd ~/tomato/release/$BROADCOM_SDK/linux
         patch -R -p4 < fix4usbap.patch
     fi
