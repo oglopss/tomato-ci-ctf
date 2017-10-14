@@ -128,7 +128,7 @@ env:
         # - TT_BUILD=rtn53 BROADCOM_SDK=src-rt
         # - TT_BUILD=e2500 BROADCOM_SDK=src-rt
         # - TT_BUILD=e3200 BROADCOM_SDK=src-rt
-        - TT_BUILD=wndr64 BROADCOM_SDK=src-rt-6.x
+        - TT_BUILD=wndr64 BROADCOM_SDK=src
         # - TT_BUILD=n6 BROADCOM_SDK=src-rt
         # - TT_BUILD=n60 BROADCOM_SDK=src-rt
 
