@@ -29,7 +29,9 @@ sudo pip install pyOpenSSL ndg-httpsclient pyasn1 -U
 sudo pip install  urllib3 -U
 sudo pip install requests -U
 
-git clone --depth 1 -b travis https://github.com/oglops/tomato.git
+# git clone --depth 1 -b travis https://github.com/oglops/tomato.git
+# because I need to revert an old commit, I have to check out the whole history
+git clone -b travis https://github.com/oglops/tomato.git
 git clone --depth 1 -b v140 https://github.com/oglops/tomato-gui.git
 
 sudo ln -s ~/tomato/tools/brcm /opt/brcm
