@@ -268,7 +268,7 @@ build_tomato()
 
     cd ~/tomato
     if [ "$TT_BUILD" == "wndr64" ] ; then
-        git show 46f7c5f0da4204eb61ff5108c7dd7a835df39576 -- release/src-rt/linux/linux-2.6/include/linux/mod_devicetable.h | git apply -R
+        git show 46f7c5f0da4204eb61ff5108c7dd7a835df39576 | git apply -R
     fi
    
     cd ~/tomato/release/$BROADCOM_SDK
