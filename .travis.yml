@@ -140,7 +140,7 @@ env:
 
         - TT_BUILD=r2q3m BROADCOM_SDK=src-rt
         - TT_BUILD=r2q3v BROADCOM_SDK=src-rt
-        - TT_BUILD=hg320 BROADCOM_SDK=src-rt
+        - TT_BUILD=hg32032k BROADCOM_SDK=src-rt
         - TT_BUILD=hg32064k BROADCOM_SDK=src-rt
         # include:
         #     - BROADCOM_SDK=6
