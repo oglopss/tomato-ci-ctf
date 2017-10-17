@@ -276,7 +276,7 @@ build_tomato()
     # make V1=RT-N5x-CN- V2=-140 r2z &
     if [ "$TT_BUILD" == "r2q3m" ] || [ "$TT_BUILD" == "r2q3v" ] ; then
         make V1=RT-N5x-CN- V2=-140-q3  $TT_BUILD > /dev/null &
-    elif [ "$TT_BUILD" == "hg32064k" ] || [ "$TT_BUILD" == "hg320" ]; then
+    elif [ "$TT_BUILD" == "hg32064k" ] || [ "$TT_BUILD" == "hg32032k" ]; then
         make V1=RT-N5x-CN- V2=-140-hg320  $TT_BUILD > /dev/null &
     else
         make V1=RT-N5x-CN- V2=-140 $TT_BUILD > /dev/null  &
