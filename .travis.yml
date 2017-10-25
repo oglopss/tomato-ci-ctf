@@ -89,7 +89,7 @@ env:
         # - TT_BUILD=r2t BROADCOM_SDK=src-rt
         # - TT_BUILD=r2b BROADCOM_SDK=src-rt
         # - TT_BUILD=r2o BROADCOM_SDK=src-rt
-        - TT_BUILD=r2z BROADCOM_SDK=src-rt
+        # - TT_BUILD=r2z BROADCOM_SDK=src-rt
         # - TT_BUILD=r2v BROADCOM_SDK=src-rt
         # - TT_BUILD=r2m BROADCOM_SDK=src-rt
         # - TT_BUILD=r2i BROADCOM_SDK=src-rt
